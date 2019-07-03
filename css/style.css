@@ -216,10 +216,14 @@ footer{
   background-color: #ececec;
   margin: 5px;
   min-height: 400px;
+  
 }
 
 .onx-border-animate:hover{
   background-color: #e6e6e6;
+  /* border:1px solid silver; */
+  box-shadow:  2px -2px 4px rgba(100,255,100,1);
+  transition-duration: 500ms;
 }
 
 .onx-link{
