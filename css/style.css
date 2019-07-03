@@ -203,3 +203,28 @@ footer{
     margin-bottom:5px;
   }
 }
+
+
+/* ==============CUSTOM================== */
+.onx-txt-justify{
+  text-align: justify;
+}
+
+.onx-border-animate{
+  border: 1px solid silver;
+  border-radius: 8px;
+  background-color: #ececec;
+  margin: 5px;
+  min-height: 400px;
+}
+
+.onx-border-animate:hover{
+  background-color: #e6e6e6;
+}
+
+.onx-link{
+  color: #3a7adb;
+  text-decoration: none;
+  font-weight:bold;
+}
+/* =============END========================= */
