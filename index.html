@@ -8,13 +8,24 @@
     <meta name="author" content="Onaxsys Technologies" />
     <title>Emmanuel Consulting | Welcome</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <div class="container">
         <div id="branding">
-         <img src="./Resources/E.png" style="float:left; width:20%; height:20%;"/>
+          <img
+            src="./Resources/E.png"
+            style="float:left; width:20%; height:20%;"
+          />
           <h1><span class="highlight">Emmanuel</span> Consulting</h1>
         </div>
         <nav>
@@ -50,57 +61,107 @@
 
     <section id="boxes">
       <div class="container">
-        
-        
         <section class="row">
-            <div class="box onx-border-animate">
-                <img src="./img/workplace_art-culture-512.png" />
-                <h3>Workplace Culture</h3>
-                <p class="onx-txt-justify">
-                  The strength of any organization lies in the ability to align every
-                  employee with the organizational culture. It does not mean
-                  suppressing employees' values, but a strategy of how to leverage
-                  them for the benefit of the organization.
-                </p>
-              </div>
+          <div class="box onx-border-animate">
+            <img src="./img/workplace_art-culture-512.png" />
+            <h3>Workplace Culture</h3>
+            <p class="onx-txt-justify">
+              The strength of any organization lies in the ability to align
+              every employee with the organizational culture. It does not mean
+              suppressing employees' values, but a strategy of how to leverage
+              them for the benefit of the organization.
+            </p>
+          </div>
 
-                <div class="box onx-border-animate">
-                <img src="./img/diversity.png" />
-                <h3>Workplace Diversity</h3>
-                <p class="onx-txt-justify">
-                  Culture for thriving organizations consists of coaching and
-                  engagement. Since all companies are not the same and have their own
-                  unique ways of handling the everyday business operations, we will
-                  design a support system that will be relevant to your work and
-                  business context. Contact us to talk about your specific needs, and
-                  that way, we will map out what strategy will be more appropriate for
-                  your company.
-                </p>
-              </div>
-      
-              <div class="box onx-border-animate">
-                <img src="./img/spirituality.png" />
-                <h3>Workplace Spirituality</h3>
-                <p class="onx-txt-justify">
-                  Workplace spirituality provides job satisfaction and trust. It makes
-                  work more meaningful. It creates a sense of community and adds value
-                  to daily work experience.
-                </p>
-              </div>
-      
-            
+          <div class="box onx-border-animate">
+            <img src="./img/diversity.png" />
+            <h3>Workplace Diversity</h3>
+            <p class="onx-txt-justify">
+              Culture for thriving organizations consists of coaching and
+              engagement. Since all companies are not the same and have their
+              own unique ways of handling the everyday business operations, we
+              will design a support system that will be relevant to your work
+              and business context. Contact us to talk about your specific
+              needs, and that way, we will map out what strategy will be more
+              appropriate for your company.
+            </p>
+          </div>
+
+          <div class="box onx-border-animate">
+            <img src="./img/spirituality.png" />
+            <h3>Workplace Spirituality</h3>
+            <p class="onx-txt-justify">
+              Workplace spirituality provides job satisfaction and trust. It
+              makes work more meaningful. It creates a sense of community and
+              adds value to daily work experience.
+            </p>
+          </div>
         </section>
-      
       </div>
     </section>
+
+    <section id="getintouch">
+      <div class="container">
+        <h2 style="font-style:italic; text-align:center;">
+          Let's get in touch
+        </h2>
+      </div>
+    </section>
+    <div class="container">
+      <section id="form" class="quote">
+        <div>
+          <label>Name</label><br />
+          <input
+            type="text"
+            placeholder="Name"
+            id="full_name"
+            class="form-control onx-form-control"
+          />
+        </div>
+        <div>
+          <label>Email</label><br />
+          <input
+            type="email"
+            placeholder="Email Address"
+            id="email_address"
+            class="form-control onx-form-control"
+          />
+        </div>
+        <div>
+          <label>Message</label><br />
+          <textarea
+            placeholder="Message"
+            id="message"
+            class="form-control onx-form-control"
+          ></textarea>
+        </div>
+        <br />
+        <div id="dvBtn" style="text-align: center;">
+          <button class="button_1" type="reset">Reset</button>
+          <button class="button_1" id="btnSubmit" type="submit">Submit</button>
+        </div>
+      </section>
+    </div>
 
     <footer>
       <p>Emmanuel Consulting, Copyright &copy; 2019</p>
     </footer>
 
     <script>
-      window.onload = () => {};
-      //#region TRIGGERED FUNCTIONS 
+      window.onload = () => {
+        var btnSubmit = document.getElementById("btnSubmit");
+
+        btnSubmit.addEventListener("click", () => {
+          var infoDetails = {
+            full_name: document.getElementById("full_name").value,
+            message: document.getElementById("message").value,
+            email_address: document.getElementById("email_address").value
+          };
+
+          console.log("Form submitted details=> ", JSON.stringify(infoDetails));
+        });
+      };
+      //#region TRIGGERED FUNCTIONS
       function SubmitEmail() {
         alert("Email for submission");
       }
