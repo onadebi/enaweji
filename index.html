@@ -158,6 +158,13 @@
             email_address: document.getElementById("email_address").value
           };
 
+          $.post(
+            "form_processor.php",infoDetails,
+            function(data, status) {
+              alert("Data: " + data + "\nStatus: " + status);
+            }
+          );
+
           console.log("Form submitted details=> ", JSON.stringify(infoDetails));
         });
       };
